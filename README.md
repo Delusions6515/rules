@@ -2,25 +2,29 @@
 
 | 文件名              | Github release                                                                                                            | JSdelivr                                                                                                                           | JSdelivr-CF                                                                                                                              |
 |---------------------|---------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------|
-| country.mmdb        | [下载](https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/country.mmdb)                                 | [下载](https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/country.mmdb)                                                   | [下载](https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/country.mmdb)                                                  |
-| geoip.dat           | [下载](https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geoip.dat)                                    | [下载](https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geoip.dat)                                                      | [下载](https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geoip.dat)                                                       |
-| geoip.db            | [下载](https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geoip.db)                                     | [下载](https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geoip.db)                                                       | [下载](https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geoip.db)                                                        |
-| geoip.metadb        | [下载](https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geoip.metadb)                                 | [下载](https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geoip.metadb)                                                   | [下载](https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geoip.metadb)                                                    |
-| country-lite.mmdb   | [下载](https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/country-lite.mmdb)                            | [下载](https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/country-lite.mmdb)                                              | [下载](https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/country-lite.mmdb)                                               |
-| geoip-lite.dat      | [下载](https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geoip-lite.dat)                               | [下载](https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geoip-lite.dat)                                                 | [下载](https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geoip-lite.dat)                                                  |
-| geoip-lite.db       | [下载](https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geoip-lite.db)                                | [下载](https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geoip-lite.db)                                                  | [下载](https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geoip-lite.db)                                                   |
-| geosite.dat         | [下载](https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geosite.dat)                                  | [下载](https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geosite.dat)                                                    | [下载](https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geosite.dat)                                                     |
-| geosite.db          | [下载](https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geosite.db)                                   | [下载](https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geosite.db)                                                     | [下载](https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geosite.db)                                                      |
-| geosite-lite.dat    | [下载](https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geosite-lite.dat)                             | [下载](https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geosite-lite.dat)                                               | [下载](https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geosite-lite.dat)                                                 |
-| geosite-lite.db     | [下载](https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geosite-lite.db)                              | [下载](https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geosite-lite.db)                                                | [下载](https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geosite-lite.db)                                                 |
-| GeoLite2-ASN.mmdb   | [下载](https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/GeoLite2-ASN.mmdb)                            | [下载](https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/GeoLite2-ASN.mmdb)                                              | [下载](https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/GeoLite2-ASN.mmdb)                                                 |                                               | [下载](https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geosite-lite.db)                                                 |
-| BundleMRS.7z        | [下载](https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/BundleMRS.7z)                                 | [下载](https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/BundleMRS.7z)                                                   | [下载](https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/BundleMRS.7z)                                                 |
+| country.mmdb        | [下载](https://github.com/Delusions6515/rules/releases/download/latest/country.mmdb)                                 | [下载](https://cdn.jsdelivr.net/gh/Delusions6515/rules@release/country.mmdb)                                                   | [下载](https://testingcf.jsdelivr.net/gh/Delusions6515/rules@release/country.mmdb)                                                  |
+| geoip.dat           | [下载](https://github.com/Delusions6515/rules/releases/download/latest/geoip.dat)                                    | [下载](https://cdn.jsdelivr.net/gh/Delusions6515/rules@release/geoip.dat)                                                      | [下载](https://testingcf.jsdelivr.net/gh/Delusions6515/rules@release/geoip.dat)                                                       |
+| geoip.db            | [下载](https://github.com/Delusions6515/rules/releases/download/latest/geoip.db)                                     | [下载](https://cdn.jsdelivr.net/gh/Delusions6515/rules@release/geoip.db)                                                       | [下载](https://testingcf.jsdelivr.net/gh/Delusions6515/rules@release/geoip.db)                                                        |
+| geoip.metadb        | [下载](https://github.com/Delusions6515/rules/releases/download/latest/geoip.metadb)                                 | [下载](https://cdn.jsdelivr.net/gh/Delusions6515/rules@release/geoip.metadb)                                                   | [下载](https://testingcf.jsdelivr.net/gh/Delusions6515/rules@release/geoip.metadb)                                                    |
+| country-lite.mmdb   | [下载](https://github.com/Delusions6515/rules/releases/download/latest/country-lite.mmdb)                            | [下载](https://cdn.jsdelivr.net/gh/Delusions6515/rules@release/country-lite.mmdb)                                              | [下载](https://testingcf.jsdelivr.net/gh/Delusions6515/rules@release/country-lite.mmdb)                                               |
+| geoip-lite.dat      | [下载](https://github.com/Delusions6515/rules/releases/download/latest/geoip-lite.dat)                               | [下载](https://cdn.jsdelivr.net/gh/Delusions6515/rules@release/geoip-lite.dat)                                                 | [下载](https://testingcf.jsdelivr.net/gh/Delusions6515/rules@release/geoip-lite.dat)                                                  |
+| geoip-lite.db       | [下载](https://github.com/Delusions6515/rules/releases/download/latest/geoip-lite.db)                                | [下载](https://cdn.jsdelivr.net/gh/Delusions6515/rules@release/geoip-lite.db)                                                  | [下载](https://testingcf.jsdelivr.net/gh/Delusions6515/rules@release/geoip-lite.db)                                                   |
+| geosite.dat         | [下载](https://github.com/Delusions6515/rules/releases/download/latest/geosite.dat)                                  | [下载](https://cdn.jsdelivr.net/gh/Delusions6515/rules@release/geosite.dat)                                                    | [下载](https://testingcf.jsdelivr.net/gh/Delusions6515/rules@release/geosite.dat)                                                     |
+| geosite.db          | [下载](https://github.com/Delusions6515/rules/releases/download/latest/geosite.db)                                   | [下载](https://cdn.jsdelivr.net/gh/Delusions6515/rules@release/geosite.db)                                                     | [下载](https://testingcf.jsdelivr.net/gh/Delusions6515/rules@release/geosite.db)                                                      |
+| geosite-lite.dat    | [下载](https://github.com/Delusions6515/rules/releases/download/latest/geosite-lite.dat)                             | [下载](https://cdn.jsdelivr.net/gh/Delusions6515/rules@release/geosite-lite.dat)                                               | [下载](https://testingcf.jsdelivr.net/gh/Delusions6515/rules@release/geosite-lite.dat)                                                 |
+| geosite-lite.db     | [下载](https://github.com/Delusions6515/rules/releases/download/latest/geosite-lite.db)                              | [下载](https://cdn.jsdelivr.net/gh/Delusions6515/rules@release/geosite-lite.db)                                                | [下载](https://testingcf.jsdelivr.net/gh/Delusions6515/rules@release/geosite-lite.db)                                                 |
+| GeoLite2-ASN.mmdb   | [下载](https://github.com/Delusions6515/rules/releases/download/latest/GeoLite2-ASN.mmdb)                            | [下载](https://cdn.jsdelivr.net/gh/Delusions6515/rules@release/GeoLite2-ASN.mmdb)                                              | [下载](https://testingcf.jsdelivr.net/gh/Delusions6515/rules@release/GeoLite2-ASN.mmdb)                                                 |                                               | [下载](https://testingcf.jsdelivr.net/gh/Delusions6515/rules@release/geosite-lite.db)                                                 |
+| BundleMRS.7z        | [下载](https://github.com/Delusions6515/rules/releases/download/latest/BundleMRS.7z)                                 | [下载](https://cdn.jsdelivr.net/gh/Delusions6515/rules@release/BundleMRS.7z)                                                   | [下载](https://testingcf.jsdelivr.net/gh/Delusions6515/rules@release/BundleMRS.7z)                                                 |
 
 ### **rule-set**
 
-mihomo：[meta branch](https://github.com/MetaCubeX/meta-rules-dat/tree/meta)
+分支内文件以 `geosite-` / `geoip-` / `geosite-lite-` / `geoip-lite-` 前缀区分类型（如 `geo/geosite/geosite-cn.srs`、`geo/geoip/geoip-cn.srs`）
 
-sing-box: [sing branch](https://github.com/MetaCubeX/meta-rules-dat/tree/sing)
+#### mihomo：[meta branch](https://github.com/Delusions6515/rules/tree/meta)
+
+#### sing-box: [sing branch](https://github.com/Delusions6515/rules/tree/sing)
+
+bm7 转换的 mixed 规则集为 `bm7/*.srs`（`*.json` 为对应源文件）
 
 ## **country.mmdb,geoip.dat,geoip.db 内容**
 
@@ -55,13 +59,16 @@ sing-box: [sing branch](https://github.com/MetaCubeX/meta-rules-dat/tree/sing)
 
 用法同 [Loyalsoldier/v2ray-rules-dat](https://github.com/Loyalsoldier/v2ray-rules-dat)
 
-- `geosite:category-ads-all` 仅使用域名作为广告拦截用途作用有限，因此不作额外域名添加
-- `geosite:cn` 源替换为 [ios_rule_script/ChinaMax_Domain](https://github.com/blackmatrix7/ios_rule_script/tree/master/rule/Clash/ChinaMax)
+- `geosite:category-ads-all` 合并 [10007/all](https://raw.githubusercontent.com/lingeringsound/10007/main/all)
+- `geosite:cn` 源替换为 [Loyalsoldier/domain-list-custom](https://github.com/Loyalsoldier/domain-list-custom)
 - `geosite:onedrive` 合并 [ios_rule_script/OneDrive](https://github.com/blackmatrix7/ios_rule_script/tree/master/rule/Clash/OneDrive)
 - `geosite:steam@cn` 合并 [ios_rule_script/SteamCN](https://github.com/blackmatrix7/ios_rule_script/tree/master/rule/Clash/SteamCN) 的内数据
-- 新增类别 - `geosite:biliintl` 来源 [biliintl](https://raw.githubusercontent.com/xishang0128/rules/main/biliintl.list) - `geosite:tracker` 来源 [TrackersList](https://trackerslist.com/#/zh)以及[blackmatrix7
-  /
-  ios_rule_script](https://github.com/blackmatrix7/ios_rule_script/tree/master/rule/Clash/PrivateTracker)
+- 新增类别
+  - `geosite:biliintl` 来源 [biliintl](https://raw.githubusercontent.com/xishang0128/rules/main/biliintl.list)
+  - `geosite:tracker` 来源 [TrackersList](https://trackerslist.com/#/zh) 以及 [blackmatrix7/ios_rule_script](https://github.com/blackmatrix7/ios_rule_script/tree/master/rule/Clash/PrivateTracker)
+- 新增类别
+  - `geosite:10007-all` 来源 [10007/all](https://raw.githubusercontent.com/lingeringsound/10007/main/all)
+  - `geosite:10007-reward` 来源 [10007/reward](https://raw.githubusercontent.com/lingeringsound/10007/main/reward)
 
 ## **geosite-lite.dat,geosite-lite.db 内容**
 
@@ -80,8 +87,8 @@ rule-providers:
     path: ./provider/rule-set/geosite-cn.mrs
     type: http
     format: mrs
-    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/cn.mrs"
-    path-in-bundle: "geo/geosite/cn.mrs"
+    url: "https://raw.githubusercontent.com/Delusions6515/rules/meta/geo/geosite/geosite-cn.mrs"
+    path-in-bundle: "geo/geosite/geosite-cn.mrs"
 
 dns:
   nameserver-policy:
@@ -138,4 +145,5 @@ https://github.com/MetaCubeX/geo
 - [@DanPollock/hosts](https://someonewhocares.org/hosts)
 - [@crazy-max/WindowsSpyBlocker](https://github.com/crazy-max/WindowsSpyBlocker)
 - [@blackmatrix7/ios_rule_script](https://github.com/blackmatrix7/ios_rule_script)
+- [@lingeringsound/10007](https://github.com/lingeringsound/10007)
 
