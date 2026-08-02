@@ -21,6 +21,8 @@ jobs:
           # echo "CHINA_DOMAINS_URL=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/ChinaMax/ChinaMax_Domain.txt" >> $GITHUB_ENV
           echo "GOOGLE_DOMAINS_URL=https://raw.githubusercontent.com/felixonmars/dnsmasq-china-list/master/google.china.conf" >> $GITHUB_ENV
           echo "APPLE_DOMAINS_URL=https://raw.githubusercontent.com/felixonmars/dnsmasq-china-list/master/apple.china.conf" >> $GITHUB_ENV
+          echo "REJECT_ALL_URL=https://raw.githubusercontent.com/lingeringsound/10007/main/all" >> $GITHUB_ENV
+          echo "REJECT_REWARD_URL=https://raw.githubusercontent.com/lingeringsound/10007/main/reward" >> $GITHUB_ENV
           echo "CUSTOM_DIRECT=https://raw.githubusercontent.com/Loyalsoldier/domain-list-custom/release/cn.txt" >> $GITHUB_ENV
           echo "CUSTOM_PROXY=https://raw.githubusercontent.com/Loyalsoldier/domain-list-custom/release/geolocation-!cn.txt" >> $GITHUB_ENV
           echo "WIN_SPY=https://raw.githubusercontent.com/crazy-max/WindowsSpyBlocker/master/data/hosts/spy.txt" >> $GITHUB_ENV
@@ -79,6 +81,10 @@ jobs:
           curl -sSL $APPLE_DOMAINS_URL | perl -ne '/^server=\/([^\/]+)\// && print "$1\n"' >> temp-proxy.txt
           curl -sSL ${CUSTOM_PROXY} | grep -Ev ":@cn" | perl -ne '/^(domain):([^:]+)(\n$|:@.+)/ && print "$2\n"' >> temp-proxy.txt
 
+      - name: Get and add reject domains into temp-reject.txt file
+        run: |
+          curl -sSL $REJECT_ALL_URL | grep -v '#' | perl -ne '/^(?:0\.0\.0\.0|127\.0\.0\.\d+)\s+([-_0-9a-zA-Z]+(\.[-_0-9a-zA-Z]+){1,64})\s*$/ && print "$1\n"' > temp-reject.txt
+
       - name: Reserve `full`, `regexp` and `keyword` type of rules from custom lists to "reserve" files
         run: |
           curl -sSL ${CUSTOM_DIRECT} | grep -v google | grep -v manhua | grep -v ooklaserver | grep -v "acg.rip" | perl -ne '/^((full|regexp|keyword):[^:]+)(\n$|:@.+)/ && print "$1\n"' | sort --ignore-case -u > direct-reserve.txt
@@ -88,30 +94,35 @@ jobs:
         run: |
           cat ./resouces/proxy.txt >> temp-proxy.txt
           cat ./resouces/direct.txt >> temp-direct.txt
-          # cat reject.txt >> temp-reject.txt
+          cat ./resouces/reject.txt >> temp-reject.txt
 
       - name: Sort and generate redundant lists
         run: |
           cat temp-proxy.txt | sort --ignore-case -u > proxy-list-with-redundant
           cat temp-direct.txt | sort --ignore-case -u > direct-list-with-redundant
-          # cat temp-reject.txt | sort --ignore-case -u > reject-list-with-redundant
+          cat temp-reject.txt | sort --ignore-case -u > reject-list-with-redundant
 
       - name: Remove redundant domains
         run: |
           chmod +x ./resouces/*.py
           python ./resouces/findRedundantDomain.py ./direct-list-with-redundant ./direct-list-deleted-unsort
           python ./resouces/findRedundantDomain.py ./proxy-list-with-redundant ./proxy-list-deleted-unsort
+          python ./resouces/findRedundantDomain.py ./reject-list-with-redundant ./reject-list-deleted-unsort
           [ ! -f "direct-list-deleted-unsort" ] && touch direct-list-deleted-unsort
           [ ! -f "proxy-list-deleted-unsort" ] && touch proxy-list-deleted-unsort
+          [ ! -f "reject-list-deleted-unsort" ] && touch reject-list-deleted-unsort
           sort ./direct-list-deleted-unsort > ./direct-list-deleted-sort
           sort ./proxy-list-deleted-unsort > ./proxy-list-deleted-sort
+          sort ./reject-list-deleted-unsort > ./reject-list-deleted-sort
           python ./resouces/removeFrom.py -remove ./direct-list-deleted-sort -from ./direct-list-with-redundant -out direct-list-without-redundant
           python ./resouces/removeFrom.py -remove ./proxy-list-deleted-sort -from ./proxy-list-with-redundant -out proxy-list-without-redundant
+          python ./resouces/removeFrom.py -remove ./reject-list-deleted-sort -from ./reject-list-with-redundant -out reject-list-without-redundant
 
       - name: Remove domains from "need-to-remove" lists in "hidden" branch
         run: |
           python ./resouces/removeFrom.py -remove ./resouces/direct-need-to-remove.txt -from ./direct-list-without-redundant -out ./temp-cn.txt
           python ./resouces/removeFrom.py -remove ./resouces/proxy-need-to-remove.txt -from ./proxy-list-without-redundant -out ./temp-geolocation-\!cn.txt
+          python ./resouces/removeFrom.py -remove ./resouces/reject-need-to-remove.txt -from ./reject-list-without-redundant -out ./temp-category-ads-all.txt
 
       - name: Remove domains end with ".cn" in "temp-geolocation-!cn.txt" and write lists to data directory
         run: |
@@ -119,6 +130,10 @@ jobs:
           cat temp-cn.txt | sort --ignore-case -u | perl -ne 'print if not /^((?=^.{3,255})[a-zA-Z0-9][-_a-zA-Z0-9]{0,62}(\.[a-zA-Z0-9][-_a-zA-Z0-9]{0,62})+)/' > direct-tld-list.txt
           cat temp-geolocation-\!cn.txt | sort --ignore-case -u | perl -ne '/^((?=^.{1,255})[a-zA-Z0-9][-_a-zA-Z0-9]{0,62}(\.[a-zA-Z0-9][-_a-zA-Z0-9]{0,62})*)/ && print "$1\n"' | perl -ne 'print if not /\.cn$/' > ./community/data/geolocation-\!cn
           cat temp-geolocation-\!cn.txt | sort --ignore-case -u | perl -ne 'print if not /^((?=^.{3,255})[a-zA-Z0-9][-_a-zA-Z0-9]{0,62}(\.[a-zA-Z0-9][-_a-zA-Z0-9]{0,62})+)/' > proxy-tld-list.txt
+          cat temp-category-ads-all.txt | sort --ignore-case -u | perl -ne '/^((?=^.{1,255})[a-zA-Z0-9][-_a-zA-Z0-9]{0,62}(\.[a-zA-Z0-9][-_a-zA-Z0-9]{0,62})*)/ && print "$1\n"' > ./community/data/category-ads-all
+          cat temp-category-ads-all.txt | sort --ignore-case -u | perl -ne 'print if not /^((?=^.{3,255})[a-zA-Z0-9][-_a-zA-Z0-9]{0,62}(\.[a-zA-Z0-9][-_a-zA-Z0-9]{0,62})+)/' > reject-tld-list.txt
+          curl -sSL $REJECT_ALL_URL | grep -v '#' | perl -ne '/^(?:0\.0\.0\.0|127\.0\.0\.\d+)\s+([-_0-9a-zA-Z]+(\.[-_0-9a-zA-Z]+){1,64})\s*$/ && print "$1\n"' | sort --ignore-case -u > ./community/data/10007-all
+          curl -sSL $REJECT_REWARD_URL | grep -v '#' | perl -ne '/^(?:0\.0\.0\.0|127\.0\.0\.\d+)\s+([-_0-9a-zA-Z]+(\.[-_0-9a-zA-Z]+){1,64})\s*$/ && print "$1\n"' | sort --ignore-case -u > ./community/data/10007-reward
 
       - name: Add `full`, `regexp` and `keyword` type of rules back into "cn", and "geolocation-!cn" list
         run: |
