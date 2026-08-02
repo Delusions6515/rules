@@ -6,11 +6,13 @@ alimama.com
 analytics.google.com
 app.chat.xiaomi.net
 bdtj.tagtic.cn
+busuanzi.ibruce.info
 cdn.onesignal.com
 click.discord.com
 click.redditmail.com
 ctrip.com
 d.ifengimg.com
+fabric.io
 icons.mydrivers.com
 img.alibaba.com
 jav321.com
@@ -18,7 +20,6 @@ knet.cn
 mail.tsinghua.edu.cn
 mtalk.google.com
 mx.technolutions.net
-newrelic.com
 offer.alibaba.com
 pingjs.qq.com
 qlogo.cn
@@ -31,3 +32,5 @@ telegra.ph
 tongji.baidu.com
 tv.sohu.com
 ue.yeyoucdn.com
+umeng.com
+wl.spotify.com
