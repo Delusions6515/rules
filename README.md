@@ -60,7 +60,7 @@ bm7 转换的 mixed 规则集为 `bm7/*.srs`（`*.json` 为对应源文件）
 用法同 [Loyalsoldier/v2ray-rules-dat](https://github.com/Loyalsoldier/v2ray-rules-dat)
 
 - `geosite:category-ads-all` 合并 [10007/all](https://raw.githubusercontent.com/lingeringsound/10007/main/all)
-- `geosite:cn` 源替换为 [ios_rule_script/ChinaMax_Domain](https://github.com/blackmatrix7/ios_rule_script/tree/master/rule/Clash/ChinaMax)
+- `geosite:cn` 源为 [ios_rule_script/ChinaMax_Domain](https://github.com/blackmatrix7/ios_rule_script/tree/master/rule/Clash/ChinaMax) 与 [Loyalsoldier/domain-list-custom](https://github.com/Loyalsoldier/domain-list-custom) 的并集
 - `geosite:onedrive` 合并 [ios_rule_script/OneDrive](https://github.com/blackmatrix7/ios_rule_script/tree/master/rule/Clash/OneDrive)
 - `geosite:steam@cn` 合并 [ios_rule_script/SteamCN](https://github.com/blackmatrix7/ios_rule_script/tree/master/rule/Clash/SteamCN) 的内数据
 - 新增类别
