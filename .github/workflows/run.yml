@@ -244,6 +244,9 @@ jobs:
           cd convert
           go run ./ geosite -f ../custom/publish/geosite.dat -o ../sing-rule/geo/geosite -t sing-box
           go run ./ geoip -f ../geoip.dat -o ../sing-rule/geo/geoip -t sing-box
+          cd ..
+          for f in ./sing-rule/geo/geosite/*; do mv "$f" "./sing-rule/geo/geosite/geosite-${f##*/}"; done
+          for f in ./sing-rule/geo/geoip/*; do mv "$f" "./sing-rule/geo/geoip/geoip-${f##*/}"; done
 
       - name: Convert geo-lite to sing-rule-set
         env:
@@ -253,6 +256,9 @@ jobs:
           cd convert
           go run ./ geosite -f ../community/geosite-lite.dat -o ../sing-rule/geo-lite/geosite -t sing-box
           go run ./ geoip -f ../geoip-lite.dat -o ../sing-rule/geo-lite/geoip -t sing-box
+          cd ..
+          for f in ./sing-rule/geo-lite/geosite/*; do mv "$f" "./sing-rule/geo-lite/geosite/geosite-lite-${f##*/}"; done
+          for f in ./sing-rule/geo-lite/geoip/*; do mv "$f" "./sing-rule/geo-lite/geoip/geoip-lite-${f##*/}"; done
 
       - name: Convert geo to meta-rule-set
         env:
@@ -262,6 +268,9 @@ jobs:
           cd convert
           go run ./ geosite -f ../custom/publish/geosite.dat -o ../meta-rule/geo/geosite
           go run ./ geoip -f ../geoip.dat -o ../meta-rule/geo/geoip
+          cd ..
+          for f in ./meta-rule/geo/geosite/*; do mv "$f" "./meta-rule/geo/geosite/geosite-${f##*/}"; done
+          for f in ./meta-rule/geo/geoip/*; do mv "$f" "./meta-rule/geo/geoip/geoip-${f##*/}"; done
 
       - name: Convert geo-lite to meta-rule-set
         env:
@@ -271,6 +280,9 @@ jobs:
           cd convert
           go run ./ geosite -f ../community/geosite-lite.dat -o ../meta-rule/geo-lite/geosite
           go run ./ geoip -f ../geoip-lite.dat -o ../meta-rule/geo-lite/geoip
+          cd ..
+          for f in ./meta-rule/geo-lite/geosite/*; do mv "$f" "./meta-rule/geo-lite/geosite/geosite-lite-${f##*/}"; done
+          for f in ./meta-rule/geo-lite/geoip/*; do mv "$f" "./meta-rule/geo-lite/geoip/geoip-lite-${f##*/}"; done
 
       - name: Convert asn
         env:
@@ -293,6 +305,7 @@ jobs:
           wget "https://github.com/SagerNet/sing-box/releases/download/v${SINGBOX_VER}/sing-box-${SINGBOX_VER}-linux-amd64.tar.gz" -O sing-box.tar.gz && tar zxvf sing-box.tar.gz && mv sing-box-${SINGBOX_VER}-linux-amd64/sing-box ./ && rm -r sing-box-${SINGBOX_VER}-linux-amd64
           ls
           chmod 755 bm7.sh && ./bm7.sh
+          for f in ./*.srs; do mv "$f" "mixed-${f##*/}"; done
           rm -r bm7.sh sing-box* rule
 
       - name: Build BundleMRS.7z
